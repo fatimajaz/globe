@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+
+<body>
+<span>
+	<div>
+		<img class="map1" src="https://cdn.pixabay.com/photo/2014/04/02/16/28/map-307405_1280.png" />
+		<img class="map2" src="https://cdn.pixabay.com/photo/2014/04/02/16/28/map-307405_1280.png" />
+	</div>
+
+</span>
+
+<style>
+
+span {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	height: 100px;
+	width: 100px;
+	background-color: blue;
+	border-radius: 50%;
+	position: absolute;
+}
+div {
+	display: flex;
+	height: 100px;
+	overflow: hidden;
+}
+img {
+	width: 100px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.map1 {
+	animation-name: rotation;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+.map2 {
+	animation-name: rotation2;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	transform: translateX(-100%);
+}
+
+@keyframes rotation {
+	0% {
+		object-position: 5% 50%;
+	}
+	50% {
+		object-position: 105% 50%;
+	}
+	100% {
+		object-position: 205% 50%;
+	}
+}
+
+@keyframes rotation2 {
+	0% {
+		object-position: -205% 50%;
+	}
+	50% {
+		object-position: -105% 50%;
+	}
+	100% {
+		object-position: -5% 50%;
+	}
+}
+
+</style>
+</body>
+<html>
